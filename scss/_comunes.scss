@@ -1,0 +1,210 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*EN TODO EL SITIO*/
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none; 
+}
+
+img{
+    max-width: 100%;
+}
+
+h1, h2, h4, h5{
+    color: $color-terciario;
+    @include centrar-todo;
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+/*HEADER*/
+
+header{
+    background-color: $color-primario;
+    
+}
+
+.navbar{
+    gap: $medida-medio;
+
+        a{
+            font-weight: 700;
+            color: $color-secundario;
+            transition: all 0.6s;
+
+            &:hover{
+                background-color: $color-cuarternario;
+                color: $color-secundario;
+            }
+
+                &:active{
+                    background-color: $color-secundario;
+                    color: $color-cuarternario
+                }
+            }
+        }
+
+.navbar-toggler{
+    color: $color-secundario;
+}
+
+
+/*FOOTER*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    @include centrar-todo;
+    background-color: $color-primario;
+}
+
+@media (min-width: $tablet){
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.info-contactos{
+    display: flex;
+    flex-direction: column;
+    @include centrar-todo;
+
+}
+
+.dato-tel-mail-redes{
+    display: flex;
+    flex-direction: column;
+    @include centrar-todo;
+    
+}
+
+@media (min-width: $tablet){
+    .dato-tel-mail-redes{
+        flex-direction: row;
+        gap: $medida-mini;
+    }
+    .redes{
+        margin-right: $medida-medio;
+    }
+    .info-contactos{
+    margin-left: $medida-chico;
+    }
+}
+
+.img-redes{
+    width: $medida-medio;
+}
+
+/*LOGO WSP*/
+.enlace-wsp{
+    position:fixed;
+    bottom: $medida-chico;
+    right: $medida-chico;
+    z-index: 1;
+}
+.logo-wsp {
+    width: $medida-medio;
+}
+@media (min-width: $tablet){
+    .logo-wsp{
+        width: $medida-grande;
+    }
+}
+
+/*CAROUSEL*/
+#carouselExampleAutoplaying{
+    margin: 0 auto;
+}
+
+.carousel-item img{
+    height: 350px;
+}
+
+@media (min-width: $tablet){
+    #carouselExampleAutoplaying{
+    width: 50%;
+    }   
+
+    .carousel-item img{
+        height: 420px;
+    }
+}
+@media (min-width: $desktop){
+    .carousel-item img{
+        height: 480px;
+    }
+}
+
+@media (min-width: $desktopXG){
+    .carousel-item img{
+        height: 550px;
+    }
+}
+
+/*CARDS*/
+main .card{
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(251,111,146,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(251,111,146,1);
+    box-shadow: 10px 10px 5px 0px rgba(251,111,146,1);
+    color: $color-terciario;
+    width: 21rem;
+    height: 37rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+    @include centrar-todo;
+    transition: all 0.6s;
+        &:hover{
+            height: 39rem;
+            width: 23rem !important;
+        }
+        /*img{
+            height: 50vh;
+        }*/
+}
+@media (min-width: $desktopXG){
+    .card{
+        /*width: 25rem;
+            &:hover{
+                width: 27rem;
+            }*/
+            p{
+                font-size: larger;
+            }
+    }
+}
+
+.cards{
+    @include centrar-todo;
+    gap: $medida-grande;
+    margin: $medida-medio 0;
+}
+
+/*BOTONES*/
+
+.btn-primary{
+    border: 2px $color-secundario;
+    padding: $medida-mini;
+    border-radius: 30px;
+    background-color: $color-secundario;
+    width: 180px;
+    font-weight: bold;
+
+    &:hover{
+        background-color: $color-cuarternario;
+        color: $color-secundario;
+        border: 2px $color-secundario;
+    }
+}

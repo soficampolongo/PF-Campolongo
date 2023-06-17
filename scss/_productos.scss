@@ -1,0 +1,73 @@
+/*BANNER*/
+
+#banner-productos{
+    background-image: url(../img/productos17.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    @include centrar-todo;
+    
+}
+
+@media (min-width: $tablet){
+    #banner-productos{
+        height: 60vh;
+    }
+}
+
+/*FILTRO PRODUCTOS*/
+
+.container-labels{
+    display: flex;
+    flex-direction: column;
+    @include centrar-todo;
+    gap: $medida-mini;
+    margin: $medida-medio;
+
+        label{
+            cursor: pointer;
+            padding: 8px 15px;
+            color: $color-secundario;
+            font-weight: bold;
+            transition: all 0.6s;
+                &:hover{
+                    color: black;
+                }
+        }
+}
+
+@media (min-width: $tablet){
+    .container-labels{
+        flex-direction: row;
+        gap: $medida-chico;
+    }
+}
+
+#delineadores, #mascara-pestañas, #labiales, #correctores, #base, #rubor, #todos{
+    display: none;
+}
+
+.delineadores, .mascara-pestañas, .labiales, .correctores, .base, .rubor, .todos{
+    display: none !important;
+}
+
+#delineadores:checked ~ .padre-productos .delineadores,
+#mascara-pestañas:checked ~ .padre-productos .mascara-pestañas,
+#labiales:checked ~ .padre-productos .labiales,
+#correctores:checked ~ .padre-productos .correctores,
+#base:checked ~ .padre-productos .base,
+#rubor:checked ~ .padre-productos .rubor{
+    display: flex !important;
+}
+
+#todos:checked ~ .padre-productos .delineadores,
+#todos:checked ~ .padre-productos .mascara-pestañas,
+#todos:checked ~ .padre-productos .labiales,
+#todos:checked ~ .padre-productos .correctores,
+#todos:checked ~ .padre-productos .base,
+#todos:checked ~ .padre-productos .rubor{
+    display: flex !important;
+}

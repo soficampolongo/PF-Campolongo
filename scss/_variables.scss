@@ -1,0 +1,24 @@
+/*PALETA DE COLORES*/
+$color-primario: #ffe5ec;
+$color-secundario: #fb6f92;
+$color-terciario: #ff8fab;
+$color-cuarternario: white;
+
+/*RESOLUCIONES DE PANTALLA*/
+$tablet: 768px;
+$desktop: 992px;
+$desktopXG: 1200px;
+
+/*MEDIDAS*/
+$medida-mini: 10px;
+$medida-chico: 20px;
+$medida-medio: 40px;
+$medida-grande: 60px;
+
+/*MIXIN*/
+@mixin centrar-todo {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-position: center;
+}

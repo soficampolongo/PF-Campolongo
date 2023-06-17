@@ -1,0 +1,41 @@
+/*BANNER*/
+.banner{
+    background-image: url(../img/ojos.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 40vh;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    @include centrar-todo;
+}
+
+@media (min-width: $tablet){
+    .banner{
+        height: 60vh;
+    }
+}
+
+
+.presentacion{
+    @extend .cards;
+    background-color: $color-primario;
+        p{
+            font-weight: bold;
+            font-size: large;
+        }
+
+}
+
+
+#imagen-sobre-mi{
+    width: 300px;
+    height: 300px;
+}    
+
+@media (min-width: $tablet){
+    #imagen-sobre-mi{
+        width: 450px;
+        height: 450px;
+    }    
+}

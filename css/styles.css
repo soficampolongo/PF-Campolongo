@@ -1,0 +1,389 @@
+@charset "UTF-8";
+/*PALETA DE COLORES*/
+/*RESOLUCIONES DE PANTALLA*/
+/*MEDIDAS*/
+/*MIXIN*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*EN TODO EL SITIO*/
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h4, h5 {
+  color: #ff8fab;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  font-weight: bold;
+  margin: 30px 0;
+}
+
+/*HEADER*/
+header {
+  background-color: #ffe5ec;
+}
+
+.navbar {
+  gap: 40px;
+}
+.navbar a {
+  font-weight: 700;
+  color: #fb6f92;
+  transition: all 0.6s;
+}
+.navbar a:hover {
+  background-color: white;
+  color: #fb6f92;
+}
+.navbar a:active {
+  background-color: #fb6f92;
+  color: white;
+}
+
+.navbar-toggler {
+  color: #fb6f92;
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  background-color: #ffe5ec;
+}
+
+@media (min-width: 768px) {
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.info-contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+}
+
+.dato-tel-mail-redes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .dato-tel-mail-redes {
+    flex-direction: row;
+    gap: 10px;
+  }
+  .redes {
+    margin-right: 40px;
+  }
+  .info-contactos {
+    margin-left: 20px;
+  }
+}
+.img-redes {
+  width: 40px;
+}
+
+/*LOGO WSP*/
+.enlace-wsp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1;
+}
+
+.logo-wsp {
+  width: 40px;
+}
+
+@media (min-width: 768px) {
+  .logo-wsp {
+    width: 60px;
+  }
+}
+/*CAROUSEL*/
+#carouselExampleAutoplaying {
+  margin: 0 auto;
+}
+
+.carousel-item img {
+  height: 350px;
+}
+
+@media (min-width: 768px) {
+  #carouselExampleAutoplaying {
+    width: 50%;
+  }
+  .carousel-item img {
+    height: 420px;
+  }
+}
+@media (min-width: 992px) {
+  .carousel-item img {
+    height: 480px;
+  }
+}
+@media (min-width: 1200px) {
+  .carousel-item img {
+    height: 550px;
+  }
+}
+/*CARDS*/
+main .card {
+  -webkit-box-shadow: 10px 10px 5px 0px rgb(251, 111, 146);
+  -moz-box-shadow: 10px 10px 5px 0px rgb(251, 111, 146);
+  box-shadow: 10px 10px 5px 0px rgb(251, 111, 146);
+  color: #ff8fab;
+  width: 21rem;
+  height: 37rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  transition: all 0.6s;
+  /*img{
+      height: 50vh;
+  }*/
+}
+main .card:hover {
+  height: 39rem;
+  width: 23rem !important;
+}
+
+@media (min-width: 1200px) {
+  .card {
+    /*width: 25rem;
+        &:hover{
+            width: 27rem;
+        }*/
+  }
+  .card p {
+    font-size: larger;
+  }
+}
+.cards, .presentacion {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  gap: 60px;
+  margin: 40px 0;
+}
+
+/*BOTONES*/
+.btn-primary {
+  border: 2px #fb6f92;
+  padding: 10px;
+  border-radius: 30px;
+  background-color: #fb6f92;
+  width: 180px;
+  font-weight: bold;
+}
+.btn-primary:hover {
+  background-color: white;
+  color: #fb6f92;
+  border: 2px #fb6f92;
+}
+
+/*BANNER*/
+.banner {
+  background-image: url(../img/ojos.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  .banner {
+    height: 60vh;
+  }
+}
+.presentacion {
+  background-color: #ffe5ec;
+}
+.presentacion p {
+  font-weight: bold;
+  font-size: large;
+}
+
+#imagen-sobre-mi {
+  width: 300px;
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  #imagen-sobre-mi {
+    width: 450px;
+    height: 450px;
+  }
+}
+/*BANNER*/
+#banner-productos {
+  background-image: url(../img/productos17.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 40vh;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+}
+
+@media (min-width: 768px) {
+  #banner-productos {
+    height: 60vh;
+  }
+}
+/*FILTRO PRODUCTOS*/
+.container-labels {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  gap: 10px;
+  margin: 40px;
+}
+.container-labels label {
+  cursor: pointer;
+  padding: 8px 15px;
+  color: #fb6f92;
+  font-weight: bold;
+  transition: all 0.6s;
+}
+.container-labels label:hover {
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .container-labels {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+#delineadores, #mascara-pestañas, #labiales, #correctores, #base, #rubor, #todos {
+  display: none;
+}
+
+.delineadores, .mascara-pestañas, .labiales, .correctores, .base, .rubor, .todos {
+  display: none !important;
+}
+
+#delineadores:checked ~ .padre-productos .delineadores,
+#mascara-pestañas:checked ~ .padre-productos .mascara-pestañas,
+#labiales:checked ~ .padre-productos .labiales,
+#correctores:checked ~ .padre-productos .correctores,
+#base:checked ~ .padre-productos .base,
+#rubor:checked ~ .padre-productos .rubor {
+  display: flex !important;
+}
+
+#todos:checked ~ .padre-productos .delineadores,
+#todos:checked ~ .padre-productos .mascara-pestañas,
+#todos:checked ~ .padre-productos .labiales,
+#todos:checked ~ .padre-productos .correctores,
+#todos:checked ~ .padre-productos .base,
+#todos:checked ~ .padre-productos .rubor {
+  display: flex !important;
+}
+
+.main-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .main-contacto {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.formulario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+  gap: 20px;
+}
+.formulario .mb-3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-position: center;
+}
+
+.foco {
+  width: 250px;
+  transition: width 1s;
+}
+.foco:focus {
+  width: 300px;
+}
+
+textarea {
+  height: 150px;
+  width: 200px;
+  transition: all 1s;
+}
+textarea:focus {
+  height: 200px;
+  width: 250px;
+}
+
+iframe {
+  max-width: 100%;
+}
+
+/*# sourceMappingURL=styles.css.map */
